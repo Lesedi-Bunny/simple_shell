@@ -2,6 +2,7 @@
 
 /**
  * execute_word - this function executes the function call
+ * @word_prompt: character identifier
  * Return: 0
  */
 void execute_word(const char *word_prompt)
@@ -19,6 +20,7 @@ void execute_word(const char *word_prompt)
 		int arg_count = 0;
 
 	char *tokenizer = strtok((char *)word_prompt, " ");
+
 	while (tokenizer != NULL)
 	{
 		args[arg_count++] = tokenizer;
@@ -26,12 +28,12 @@ void execute_word(const char *word_prompt)
 	}
 	args[arg_count] = NULL;
 
-	execvp(args[0], args);
+	execve(args[0], args, NULL);
 	shell_print("Error executing command.\n");
 	exit(EXIT_FAILURE);
 	}
-       	else
+	else
 	{
-        	wait(NULL);
+		wait(NULL);
 	}
 }

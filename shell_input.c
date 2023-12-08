@@ -2,6 +2,8 @@
 
 /**
  * read_word - read the word from the standard input
+ * @word_prompt: character identifier
+ * @size: int identifier
  * Return: 0
  */
 void read_word(char *word_prompt, size_t size)
@@ -18,6 +20,6 @@ void read_word(char *word_prompt, size_t size)
 			shell_print("Error while reading input.\n");
 			exit(EXIT_FAILURE);
 		}
-    }
-    word_prompt[strcspn(word_prompt, "\n")] = '\0';
+	}
+	word_prompt[strcspn(word_prompt, "\n")] = '\0';
 }

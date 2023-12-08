@@ -4,7 +4,7 @@
  * main - checks the code
  * Return: 0
  */
-int main (void)
+int main(void)
 {
 	char word_prompt[256];
 
