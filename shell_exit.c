@@ -1,12 +1,16 @@
 #include "simple_shell.h"
 
 /**
- * shell_exit - terminate normal process
- * @status: identifier
+ * execute_exit - terminate normal process
+ *
+ * Description: This function terminates the shell program
+ *
  * Return: 0
  */
-void shell_exit(int status)
+void execute_exit(void)
 {
-	if (status == 0)
+	const char *exit_message = "Exiting the shell...\n";
+
+	write(STDOUT_FILENO, exit_message, strlen(exit_message));
 	_exit(0);
 }
