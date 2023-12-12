@@ -14,5 +14,6 @@ int main(void)
 		read_word(word_prompt, sizeof(word_prompt));
 		execute_word(word_prompt);
 	}
+	shell_exit(0);
 	return (0);
 }

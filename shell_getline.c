@@ -1,5 +1,5 @@
-#include <unistd.h>
-#include <string.h>
+#include "simple_shell.h"
+
 /**
  * my_getline - Read a line from standard input.
  *

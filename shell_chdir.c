@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <fcntl.h>
+#include "simple_shell.h"
 
 /**
  * change_directory - change the current working directory
