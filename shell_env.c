@@ -34,7 +34,7 @@ void env_builtin(char *envp[])
 }
 
 /**
- * main - The entry point of the program.
+ * shell_env - The entry point of the program.
  *
  * Description: This function serves as the entry point of the program.
  * It calls the `env_builtin` function with the environment variables
@@ -46,7 +46,7 @@ void env_builtin(char *envp[])
  *
  * Return: The exit status of the program.
  */
-int main(int argc, char *argv[], char *envp[])
+int shell_env(int argc, char *argv[], char *envp[])
 {
 	(void)argc;  /* Silence unused parameter warning */
 	(void)argv;  /* Silence unused parameter warning */
