@@ -1,12 +1,15 @@
-#include "simple_shell.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 /**
- * shell_exit - exits the shell process
- * @exitStatus: process termination identifier
- * Return: 0
+ * exit_builtin - Exit the shell.
+ *
+ * Description: This function terminates the shell program.
+ * It does not take any arguments.
+ * Usage: exit
  */
-void shell_exit(int exitStatus)
+void exit_builtin(void)
 {
-	shell_print("Exiting the shell window...\n");
-	exit(exitStatus);
+	exit(EXIT_SUCCESS);
 }

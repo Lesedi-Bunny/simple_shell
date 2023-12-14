@@ -1,4 +1,3 @@
-#include "simple_shell.h"
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -7,11 +6,10 @@
  * env_builtin - Print the current environment variables.
  *
  * Description: This function prints the current environment variables
- * to the standard output without using the `printf` function or any
- * external variables. It uses the `write` function to write each
- * character of the environment variables to the standard output.
+ * to the standard output without using the `printf` function
  *
  * @envp: The environment variables as a null-terminated array of strings.
+ * Return: The exit status of the program.
  */
 void env_builtin(char *envp[])
 {
@@ -19,19 +17,20 @@ void env_builtin(char *envp[])
 
 	while (*env_ptr != NULL)
 	{
-		char *env_var = *env_ptr;
-		char *ptr = env_var;
+	char *env_var = *env_ptr;
+	char *ptr = env_var;
 
-		while (*ptr != '\0')
+	while (*ptr != '\0')
 	{
 		write(STDOUT_FILENO, ptr, 1);
 		ptr++;
 	}
 
-		write(STDOUT_FILENO, "\n", 1);
-		env_ptr++;
+	write(STDOUT_FILENO, "\n", 1);
+	env_ptr++;
 	}
 }
+<<<<<<< HEAD
 
 /**
  * shell_env - The entry point of the program.
@@ -55,3 +54,5 @@ int shell_env(int argc, char *argv[], char *envp[])
 
 	return (0);
 }
+=======
+>>>>>>> f33e485c74226452f430a8487f5e422fc8c977ef
